@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Lustria";
+    src: url("/fonts/Lustria-Regular.ttf") format("truetype");
+}
+
+body {
+    background-color: #16161b;
+    color: #ffffff;
+    font-family: "Lustria", serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    color: #B3002D;
+}
+
+/* Header */
+
+.header {
+    background: linear-gradient(135deg, #800020, #990026, #b3002d, #990026, #800020);
+    background-size: 200% 200%;
+    background-blend-mode: multiply;
+    padding: 25px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    box-shadow: inset 0 -4px 8px rgba(255, 255, 255, 0.1),
+                inset 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Title of website as it appears in header */
+.header h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+/* Home page */
+
+.wrapper {
+    flex: 1;
+    padding-left: 0px;
+    box-sizing: border-box;
+}
+
+/* <h1> on Home page */
+
+.home-title {
+    text-align: center;
+}
+
+
+/* Home page cards */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card Unique Styles */
+
+.grimm-card {
+    background-color: #333;
+}
+
+
+.quartier-card {
+    background-color: #47AB00;
+}
+
+/* Card Shared Styles */
+
+.grimm-card, .quartier-card {
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.grimm-card a, .quartier-card a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+.grimm-card:hover, .quartier-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Pages */
+
+/* <h1> on pages other than home */
+
+.page-title {
+    text-align: center;
+    color: #815469;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    background: linear-gradient(135deg, #800020, #990026, #b3002d, #990026, #800020);
+    background-size: 200% 200%;
+    background-blend-mode: multiply;
+    border-radius: 0px;
+    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.1),
+                inset 0 -4px 8px rgba(0, 0, 0, 0.1),
+                0 -1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social li {
+    margin-bottom: 7px;
+}
+
+.social a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease-in-out;
+}
+
+.social a:hover {
+    color: rgb(135, 206, 235);
+    text-decoration: underline;
+}
