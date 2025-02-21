@@ -135,9 +135,9 @@ a {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
     .wrapper {
-        max-width: 1200px;
+        max-width: 1500px;
         margin: 0 auto;
     }
 }
