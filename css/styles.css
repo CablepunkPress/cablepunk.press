@@ -42,6 +42,7 @@ a {
 .header h2 {
     margin: 0;
     font-size: 36px;
+    
 }
 
 .header a {
@@ -62,6 +63,8 @@ a {
 
 .home-title {
     text-align: center;
+    padding-top: 7px;
+    font-size: 26px;
 }
 
 
@@ -131,6 +134,12 @@ a {
     .grimm-card a, .quartier-card a {
         padding: 20px;
     }
+
+    .home-title {
+        padding-top: 5px;
+        font-size: 40px;
+    }
+
 }
 
 
@@ -151,7 +160,7 @@ a {
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
-    background: #333;
+    background: rgb(25, 25, 25);
   
 }
 
