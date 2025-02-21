@@ -20,15 +20,22 @@ a {
 /* Header */
 
 .header {
-    background: linear-gradient(135deg, #800020, #990026, #b3002d, #990026, #800020);
+    background: linear-gradient(135deg, #1e2a73, #243493, #3142f6, #6a79e3, #3f57c0, #243493, #1e2a73);
     background-size: 200% 200%;
-    background-blend-mode: multiply;
+    background-blend-mode: overlay;
     padding: 25px;
     margin-bottom: 0px;
     border-radius: 0px;
     box-shadow: inset 0 -4px 8px rgba(255, 255, 255, 0.1),
-                inset 0 4px 8px rgba(0, 0, 0, 0.1),
-                0 2px 4px rgba(0, 0, 0, 0.7);
+                inset 0 4px 8px rgba(100, 100, 100, 0.1),
+                0 2px 4px rgba(100, 100, 100, 0.7);
+    animation: metallicShine 44s infinite alternate ease-in-out;
+}
+
+
+@keyframes metallicShine {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 /* Title of website as it appears in header */
@@ -62,7 +69,7 @@ a {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -82,12 +89,12 @@ a {
 /* Card Shared Styles */
 
 .grimm-card, .quartier-card {
-    display: inline-block;
+    
     color: white;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     text-decoration: none;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -97,13 +104,35 @@ a {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 20px;
+    padding: 0px;
+}
+
+.grimm-card a:focus, .quartier-card a:focus {
+    outline: 2px solid #00f; /* or any color that stands out */
 }
 
 .grimm-card:hover, .quartier-card:hover {
     transform: scale(1.03);
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
 }
+
+.grimm-card a:focus, .quartier-card a:focus {
+    outline: 2px solid #fff; /* or any color that stands out */
+}
+
+
+
+@media (min-width: 821px) {
+
+    .grimm-card, .quartier-card {
+        font-size: 24px;
+    }
+
+    .grimm-card a, .quartier-card a {
+        padding: 20px;
+    }
+}
+
 
 /* Pages */
 
