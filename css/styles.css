@@ -41,7 +41,7 @@ a {
 /* Title of website as it appears in header */
 .header h2 {
     margin: 0;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .header a {
@@ -151,13 +151,8 @@ a {
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
-    background: linear-gradient(135deg, #800020, #990026, #b3002d, #990026, #800020);
-    background-size: 200% 200%;
-    background-blend-mode: multiply;
-    border-radius: 0px;
-    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.1),
-                inset 0 -4px 8px rgba(0, 0, 0, 0.1),
-                0 -1px 4px rgba(0, 0, 0, 0.7);
+    background: #333;
+  
 }
 
 .social ul {
@@ -173,10 +168,8 @@ a {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: normal;
-    transition: color 0.3s ease-in-out;
 }
 
 .social a:hover {
-    color: rgb(135, 206, 235);
     text-decoration: underline;
 }
