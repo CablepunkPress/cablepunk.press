@@ -123,7 +123,7 @@ a {
     outline: 2px solid #fff; /* or any color that stands out */
 }
 
-
+/* Card media queries */
 
 @media (min-width: 821px) {
 
@@ -140,6 +140,13 @@ a {
         font-size: 40px;
     }
 
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 
