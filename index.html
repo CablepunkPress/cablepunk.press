@@ -44,12 +44,21 @@
     </div>
 
     <footer class="footer">
+        <!-- external link icon from Ionic https://ionic.io/ionicons -->
         <div class="social">
             <ul>
-                <li><a href="https://bsky.app/">BlueSky</a></li>
-                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://bsky.app/" class="external-link" target="_blank" rel="noopener noreferrer" aria-label="Open BlueSky profile in new tab">
+                    <span>BlueSky</span>
+                    <img src="open-outline.svg" class="external-link-icon" alt="External link icon"></a>
+                </li>
+                <li><a href="https://github.com/" class="external-link" target="_blank" rel="noopener noreferrer" aria-label="Open Github profile in new tab">
+                    <span>GitHub</span>
+                    <img src="open-outline.svg" class="external-link-icon" alt="External link icon"></a>
+                </li>
             </ul>
         </div>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
