@@ -32,24 +32,22 @@ a {
     animation: metallicShine 44s infinite alternate ease-in-out;
 }
 
-
 @keyframes metallicShine {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
 }
 
 /* Title of website as it appears in header */
+
 .header h2 {
     margin: 0;
     font-size: 36px;
-    
 }
 
 .header a {
     text-decoration: none;
     color: #FFFFFF;
 }
-
 
 /* Home page */
 
@@ -67,7 +65,6 @@ a {
     font-size: 26px;
 }
 
-
 /* Home page cards */
 
 .card-container {
@@ -84,7 +81,6 @@ a {
     background-color: #333;
 }
 
-
 .quartier-card {
     background-color: #47AB00;
 }
@@ -92,7 +88,6 @@ a {
 /* Card Shared Styles */
 
 .grimm-card, .quartier-card {
-    
     color: white;
     padding: 20px;
     border-radius: 20px;
@@ -126,7 +121,6 @@ a {
 /* Card media queries */
 
 @media (min-width: 821px) {
-
     .grimm-card, .quartier-card {
         font-size: 24px;
     }
@@ -139,7 +133,6 @@ a {
         padding-top: 5px;
         font-size: 40px;
     }
-
 }
 
 @media (min-width: 1200px) {
@@ -168,7 +161,6 @@ a {
     justify-content: flex-end;
     padding-right: 20px;
     background: rgb(25, 25, 25);
-  
 }
 
 .social ul {
