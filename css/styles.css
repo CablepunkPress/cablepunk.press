@@ -75,19 +75,10 @@ a {
     padding: 20px;
 }
 
-/* Card Unique Styles */
-
-.grimm-card {
-    background-color: #333;
-}
-
-.quartier-card {
-    background-color: #47AB00;
-}
-
 /* Card Shared Styles */
 
-.grimm-card, .quartier-card {
+.card {
+    display: block;
     color: white;
     padding: 20px;
     border-radius: 20px;
@@ -98,34 +89,35 @@ a {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.grimm-card a, .quartier-card a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 0px;
-}
-
-.grimm-card a:focus, .quartier-card a:focus {
-    outline: 2px solid #00f; /* or any color that stands out */
-}
-
-.grimm-card:hover, .quartier-card:hover {
+.card:hover {
     transform: scale(1.03);
-    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
 }
 
-.grimm-card a:focus, .quartier-card a:focus {
-    outline: 2px solid #fff; /* or any color that stands out */
+.card:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
 }
+
+/* Card Unique Styles */
+
+.grimm-card {
+    background-color: #333;
+}
+
+.quartier-card {
+    background-color: #47AB00;
+}
+
 
 /* Card media queries */
 
 @media (min-width: 821px) {
-    .grimm-card, .quartier-card {
+    .card {
         font-size: 24px;
     }
 
-    .grimm-card a, .quartier-card a {
+    .card a {
         padding: 20px;
     }
 
