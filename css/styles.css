@@ -16,32 +16,51 @@ body {
 /* Header */
 
 .header {
-    background: linear-gradient(135deg,#16161d, #191922, #1e1e26, #20202a, #23232c, #2f2f3c, #373746, #2f2f3c, #23232c, #20202a, #1e1e26, #191922, #16161d);
-    background-size: 200% 200%;
+    background: linear-gradient(
+        135deg,
+        #003300,
+        #005500,
+        #00aa00,
+        #00ff00,
+        #00aa00,
+        #005500,
+        #003300
+    );
+    background-size: 100% 100%;
     background-blend-mode: overlay;
     padding: 30px;
-    margin-bottom: 0px;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: metallicShine 44s infinite alternate ease-in-out;
-}
-
-@keyframes metallicShine {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.25);
 }
 
 /* Title of website as it appears in Header */
 
 .site-title {
     margin: 0;
-    font-size: 36px;
-    letter-spacing: 0.4px;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    color: #b0ffb0;
+    text-shadow: 
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 15px #00aa00;
 }
 
 .header a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #b0ffb0;
+}
+
+.subtitle {   
+    margin: 10px 0 0 1px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #b0ffb0;
+    text-shadow: 
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 15px #00aa00;
 }
 
 /* Home page */
@@ -68,11 +87,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #ffffff;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
     font-size: 45px;
+    letter-spacing: 2.0px;
     font-weight: normal;
     text-decoration: none;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -95,11 +115,22 @@ body {
 /* Card Unique Styles */
 
 .grimm-card {
-    background-color: #333;
+    background: linear-gradient(
+        135deg,
+        #330000,
+        #660000,
+        #aa0000,
+        #ff0000,
+        #aa0000,
+        #660000,
+        #330000
+    );
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
 }
 
 .cq-card {
-    background-color: #47AB00;
+    background-color: #0000FF;
 }
 
 /* Pages */
