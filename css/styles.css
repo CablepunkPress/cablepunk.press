@@ -21,18 +21,32 @@ body {
         #003300,
         #005500,
         #00aa00,
-        #00ff00,
+        #33ff33,
         #00aa00,
         #005500,
         #003300
     );
-    background-size: 100% 100%;
+    background-size: 150% 150%;
     background-blend-mode: overlay;
     padding: 30px;
     margin-bottom: 0;
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 255, 0, 0.25);
+    animation: headerGradientMove 20s ease-in-out infinite;
 }
+
+@keyframes headerGradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 
 /* Title of website as it appears in Header */
 
@@ -130,7 +144,18 @@ body {
 }
 
 .cq-card {
-    background-color: #0000FF;
+    background: linear-gradient(
+        135deg,
+        #000033,
+        #000066,
+        #0033aa,
+        #0066ff,
+        #0033aa,
+        #000066,
+        #000033
+    );
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
 }
 
 /* Pages */
