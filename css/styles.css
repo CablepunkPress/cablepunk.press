@@ -13,22 +13,16 @@ body {
     height: 100vh;
 }
 
-a {
-    color: #B3002D;
-}
-
 /* Header */
 
 .header {
-    background: linear-gradient(135deg, #1e2a73, #243493, #3142f6, #6a79e3, #3f57c0, #243493, #1e2a73);
+    background: linear-gradient(135deg,#16161d, #191922, #1e1e26, #20202a, #23232c, #2f2f3c, #373746, #2f2f3c, #23232c, #20202a, #1e1e26, #191922, #16161d);
     background-size: 200% 200%;
     background-blend-mode: overlay;
-    padding: 25px;
+    padding: 30px;
     margin-bottom: 0px;
     border-radius: 0px;
-    box-shadow: inset 0 -4px 8px rgba(255, 255, 255, 0.1),
-                inset 0 4px 8px rgba(100, 100, 100, 0.1),
-                0 2px 4px rgba(100, 100, 100, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: metallicShine 44s infinite alternate ease-in-out;
 }
 
@@ -37,11 +31,12 @@ a {
     100% { background-position: 100% 100%; }
 }
 
-/* Title of website as it appears in header */
+/* Title of website as it appears in Header */
 
-.header h2 {
+.site-title {
     margin: 0;
     font-size: 36px;
+    letter-spacing: 0.4px;
 }
 
 .header a {
