@@ -175,29 +175,54 @@ body {
     display: flex;
     justify-content: center;
     padding-right: 20px;
+    padding-bottom: 50px;
     background: rgb(25, 25, 25);
     gap: 2rem;
 }
 
-.pages ul {
+/* Page Links */
+
+.footer-cards {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     padding: 0;
+    margin: 0;
 }
 
-.pages li {
-    margin-bottom: 8px;
+.footer-card {
+    background: linear-gradient(
+        135deg,
+        #2a0033,
+        #550055,
+        #aa00aa,
+        #550055,
+        #2a0033
+    );
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 8px rgba(170, 0, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    flex: 1 1 150px;
 }
 
-.pages a {
-    color: #FFFFFF;
+.footer-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(170, 0, 255, 0.3);
+}
+
+.footer-card a {
+    color: #e0b3ff;
     text-decoration: none;
-    font-weight: normal;
-    font-size: 20px;
+    font-size: 14px;
+    display: block;
 }
 
-.pages a:hover {
-    text-decoration: underline;
-}
+
+
+/* Social Links */
 
 .social ul {
     list-style: none;
