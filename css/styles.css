@@ -173,25 +173,26 @@ body {
 .footer {
     margin-top: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding-right: 20px;
     padding-bottom: 50px;
     background: rgb(25, 25, 25);
     gap: 2rem;
 }
 
-/* Page Links */
+/* Pages Cards */
 
-.footer-cards {
+.pages-cards {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 0;
     margin: 0;
+    font-size: 24px;
 }
 
-.footer-card {
+.page-card {
     background: linear-gradient(
         135deg,
         #2a0033,
@@ -205,43 +206,69 @@ body {
     box-shadow: 0 4px 8px rgba(170, 0, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    flex: 1 1 150px;
+    width: 300px;
+    height: 33px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.footer-card:hover {
+.page-card:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(170, 0, 255, 0.3);
 }
 
-.footer-card a {
+.page-card a {
     color: #e0b3ff;
     text-decoration: none;
-    font-size: 14px;
     display: block;
 }
 
 
+/* Social Cards */
 
-/* Social Links */
-
-.social ul {
+.social-cards {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     padding: 0;
+    margin: 0;
 }
 
-.social li {
-    margin-bottom: 8px;
+.social-card {
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #1a1a1a,
+        #333333,
+        #1a1a1a,
+        #000000
+    );
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 8px rgba(170, 0, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    height: 33px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social a {
-    color: #FFFFFF;
+.social-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(170, 0, 255, 0.3);
+}
+
+.social-card a {
+    color: #e0b3ff;
     text-decoration: none;
-    font-weight: normal;
-    font-size: 20px;
-}
-
-.social a:hover {
-    text-decoration: underline;
+    font-size: 14px;
+    display: block;
 }
 
 .external-link-icon {
@@ -258,5 +285,33 @@ body {
 @media (min-width: 768px) {
     .site-title {
         font-size: 50px;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .pages,
+    .social {
+        flex: 1;
+    }
+
+    .pages-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
     }
 }
