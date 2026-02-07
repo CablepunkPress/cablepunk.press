@@ -7,7 +7,7 @@
 
     // Character set
     const chars = [
-        //  こんにちは。私の名前はケーブルパンクです。
+        // こんにちは。私の名前はケーブルパンクです。
         'こ', 'ん', 'に', 'ち', 'は', '。', '私', 'の', '名', '前',
         'は', 'ケ', 'ー', 'ブ', 'ル', 'パ', 'ン', 'ク', 'で', 'す', '。',
         // Cables / Lines / Pipes
@@ -52,9 +52,9 @@
     }
 
     function getBlueColor(brightness, opacity) {
-        const r = Math.floor(brightness * 30);
-        const g = Math.floor(brightness * 30);
-        const b = Math.floor(180 + brightness * 75);
+        const r = Math.floor(brightness * 50);
+        const g = Math.floor(brightness * 80);
+        const b = Math.floor(200 + brightness * 55);
         return 'rgba(' + r + ',' + g + ',' + b + ',' + (opacity * brightness) + ')';
     }
 
@@ -135,10 +135,16 @@
                 const brightness = Math.max(0, 1 - (i / stream.trailLength));
 
                 if (brightness > 0) {
-                    ctx.fillStyle = stream.colorFn(brightness, stream.opacity);
+                    const color = stream.colorFn(brightness, stream.opacity);
+                    ctx.fillStyle = color;
+                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 8 * brightness;
                     ctx.fillText(t.char, stream.x, t.y);
                 }
             }
+
+            // Reset shadow after drawing
+            ctx.shadowBlur = 0;
         };
 
         return stream;
