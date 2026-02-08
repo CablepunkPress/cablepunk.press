@@ -375,6 +375,7 @@ a[target="_blank"]::after {
     vertical-align: -0.1em;
     opacity: 0.8;
     transition: opacity 0.2s ease;
+    font-style: normal;
 }
 
 a[target="_blank"]:hover::after {
