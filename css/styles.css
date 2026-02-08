@@ -192,6 +192,77 @@ body {
 }
 
 /* ================================
+   ARTICLE CONTENT PAGE
+   ================================ */
+.content-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 3rem 20px;
+}
+
+.article-content {
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.25rem;
+}
+
+.article-content h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.article-content h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.article-content h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.article-content a {
+    color: #88ccff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.article-content a:hover {
+    color: #aaddff;
+}
+
+.article-content ul {
+    margin-bottom: 1.25rem;
+    padding-left: 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.article-content em {
+    font-style: italic;
+}
+
+.article-updated {
+    font-size: 14px;
+    margin-top: 3rem;
+    opacity: 0.7;
+}
+
+/* ================================
    BOOKS PAGE
    ================================ */
 
@@ -283,6 +354,35 @@ body {
 }
 
 /* ================================
+   EXTERNAL LINK INDICATORS
+   ================================ */
+/* Add arrow to external links */
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.85em;
+    margin-left: 0.25em;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+a[target="_blank"]:hover::after {
+    opacity: 1;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ================================
    DESKTOP (768px and up)
    ================================ */
 @media (min-width: 768px) {
@@ -303,11 +403,40 @@ body {
          width: 280px;
     }
 
+    /* non index page */
     .page-title {
         font-size: 36px;
         padding: 2rem 30px 1rem 30px;
     }
 
+    /* article pages */
+    .content-article {
+        padding: 0 30px 4rem 30px;
+    }
+
+    .article-content h2 {
+        font-size: 32px;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .article-content h3 {
+        font-size: 26px;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .article-content h4 {
+        font-size: 20px;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .article-updated {
+        font-size: 16px;
+    }
+
+    /* books page */
     .books-container {
         padding: 20px 30px;
     }
