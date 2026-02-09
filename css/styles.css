@@ -132,7 +132,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 180px;
+    width: 280px;
     height: 100vh;
     background-color: rgba(13, 13, 13, 0.95);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
@@ -410,10 +410,6 @@ a[target="_blank"]:hover::after {
     .subtitle {
         font-size: 16px;
         margin-top: 8px;
-    }
-
-    .nav-menu {
-         width: 280px;
     }
 
     /* non index page */

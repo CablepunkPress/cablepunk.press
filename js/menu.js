@@ -3,8 +3,8 @@
     const menuItems = [
         { label: 'Signal', href: '/' },
         { label: 'What is cablepunk?', href: '/what-is-cablepunk' },
-        { label: 'About', href: '/about' },
-        { label: 'Privacy', href: '/privacy' }
+        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'About', href: '/about' }
     ];
 
     // Find the header
