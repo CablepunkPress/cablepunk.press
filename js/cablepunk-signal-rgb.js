@@ -1,9 +1,20 @@
 // Cablepunk Signal RGB
 (function() {
-    const canvas = document.getElementById('signal-canvas');
+    const canvas = /** @type {HTMLCanvasElement} */ (document.getElementById('signal-canvas'));
     if (!canvas) return;
 
+    /** @type {CanvasRenderingContext2D | null} */
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    /**
+    * @typedef {Object} Layer
+    * @property {number} fontSize
+    * @property {number} opacity
+    * @property {number} speedMin
+    * @property {number} speedMax
+    * @property {number} trailLength
+    */
 
     // Character set
     const chars = [
@@ -37,6 +48,10 @@
     ];
 
     // Component video colors: Red, Green, Blue
+    /**
+    * @param {number} brightness
+    * @param {number} opacity
+    */
     function getRedColor(brightness, opacity) {
         const r = Math.floor(180 + brightness * 75);
         const g = Math.floor(brightness * 30);
@@ -44,6 +59,10 @@
         return 'rgba(' + r + ',' + g + ',' + b + ',' + (opacity * brightness) + ')';
     }
 
+    /**
+    * @param {number} brightness
+    * @param {number} opacity
+    */
     function getGreenColor(brightness, opacity) {
         const r = Math.floor(brightness * 30);
         const g = Math.floor(180 + brightness * 75);
@@ -51,6 +70,10 @@
         return 'rgba(' + r + ',' + g + ',' + b + ',' + (opacity * brightness) + ')';
     }
 
+    /**
+    * @param {number} brightness
+    * @param {number} opacity
+    */
     function getBlueColor(brightness, opacity) {
         const r = Math.floor(brightness * 50);
         const g = Math.floor(brightness * 80);
@@ -63,6 +86,10 @@
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
+    /**
+    * @param {number} x
+    * @param {Layer} layer
+    */
     function createStream(x, layer) {
         const stream = {
             x: x,
@@ -72,9 +99,9 @@
             colorFn: getRandomColorFunction(),
             trailLength: layer.trailLength,
             opacity: layer.opacity,
-            trail: [],
+            trail: /** @type {{char: string, y: number, age: number}[]} */ ([]),
             headY: Math.random() * -canvas.height,
-            charQueue: [],
+            charQueue: /** @type {string[]} */ ([]),
             charIndex: 0
         };
 
