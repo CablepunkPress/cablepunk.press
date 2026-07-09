@@ -293,7 +293,7 @@ body {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -322,6 +322,10 @@ body {
     font-weight: normal;
     transition: outline 0.2s ease;
     text-align: center;
+}
+
+a.buy-button[target="_blank"]::after {
+    display: none;
 }
 
 .buy-button:hover,
@@ -394,6 +398,7 @@ a[target="_blank"]:hover::after {
     white-space: nowrap;
     border-width: 0;
 }
+
 
 /* ================================
    DESKTOP (768px and up)
