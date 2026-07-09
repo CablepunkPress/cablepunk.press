@@ -358,6 +358,100 @@ a.buy-button[target="_blank"]::after {
 }
 
 /* ================================
+   ABOUT PAGE — TEAM CARDS
+   ================================ */
+
+.team-cards {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-card {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.team-info {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.team-name {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.team-field {
+    margin-bottom: 0.25rem;
+}
+
+.team-label {
+    opacity: 0.6;
+}
+
+.team-link {
+    margin-top: 0.5rem;
+}
+
+.team-link a {
+    color: #88ccff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.team-link a:hover {
+    color: #aaddff;
+}
+
+/* ================================
+   ABOUT PAGE — SOCIAL LINKS
+   ================================ */
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #88ccff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #aaddff;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+a.social-link[target="_blank"]::after {
+    display: none;
+}
+
+/* ================================
    EXTERNAL LINK INDICATORS
    ================================ */
 /* Add SVG icon to external links */
@@ -398,7 +492,6 @@ a[target="_blank"]:hover::after {
     white-space: nowrap;
     border-width: 0;
 }
-
 
 /* ================================
    DESKTOP (768px and up)
@@ -483,5 +576,19 @@ a[target="_blank"]:hover::after {
     .buy-button {
         font-size: 18px;
         padding: 14px 28px;
+    }
+
+    /* about page */
+    .team-card {
+        width: 200px;
+        padding: 1.25rem;
+    }
+
+    .team-name {
+        font-size: 18px;
+    }
+
+    .team-info {
+        font-size: 14px;
     }
 }

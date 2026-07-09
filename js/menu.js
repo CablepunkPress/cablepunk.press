@@ -3,9 +3,9 @@
     const menuItems = [
         { label: 'Signal', href: '/' },
         { label: 'Books', href: '/books' },
-        { label: 'What is cablepunk?', href: '/what-is-cablepunk' },
         { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'About', href: '/about' }
+        { label: 'About Us', href: '/about' },
+        { label: 'What is cablepunk?', href: '/what-is-cablepunk' }
     ];
 
     // Find the header
