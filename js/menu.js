@@ -2,6 +2,7 @@
     // Menu content
     const menuItems = [
         { label: 'Signal', href: '/' },
+        { label: 'Books', href: '/books' },
         { label: 'What is cablepunk?', href: '/what-is-cablepunk' },
         { label: 'Privacy Policy', href: '/privacy' },
         { label: 'About', href: '/about' }
@@ -45,6 +46,6 @@
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
         const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-        hamburger.setAttribute('aria-expanded', !expanded);
+        hamburger.setAttribute('aria-expanded', String(!expanded));
     });
 })();
