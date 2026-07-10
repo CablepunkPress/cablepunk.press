@@ -363,30 +363,34 @@ a.buy-button[target="_blank"]::after {
 
 .team-cards {
     display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .team-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     padding: 1rem;
-    width: 180px;
-    flex-shrink: 0;
 }
 
 .team-photo {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 0.75rem;
+    flex-shrink: 0;
 }
 
 .team-info {
     font-size: 13px;
     line-height: 1.6;
+    flex: 1;
+    min-width: 0;
 }
 
 .team-name {
@@ -578,10 +582,19 @@ a[target="_blank"]:hover::after {
         padding: 14px 28px;
     }
 
-    /* about page */
+    /* about page — team cards */
+    .team-cards {
+        flex-direction: row;
+    }
+
     .team-card {
-        width: 200px;
+        flex: 1;
         padding: 1.25rem;
+    }
+
+    .team-photo {
+        width: 96px;
+        height: 96px;
     }
 
     .team-name {
